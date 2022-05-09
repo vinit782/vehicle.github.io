@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Tvs iqube",
+    "KeyFeatures": {
+      "Odometer": "Digital",
+      "Regenerative breaking": "YES",
+      "Reversemode": "YES",
+      "MobileAppConnectivity": "YES",
+      "GPSAndNavigationYes": "YES"
+    },
+    "KeySpecifications": {
+      "RidingRange": "75 Km",
+      "TopSpeed": "78 Kmph",
+      "Batterychargingtime": "5Hrs",
+      },
+    "DimensionAndCapacity": {
+      "KerbWeight":"118kg",
+      "OverallLength":"1,800mm",
+      "OverallWidth":"645mm",
+      "WheelBase": "1301mm",
+      "SeatHeight":"720mm"
+    },
+    "exshowroomprice":"Rs.87000",
+    "imgsrc": "Tvs iqube.jpg",
+    "imagealt": "Tvs iqube"
+  }
+]

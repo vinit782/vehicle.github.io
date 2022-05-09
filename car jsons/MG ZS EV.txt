@@ -1,0 +1,30 @@
+[
+  {
+    "name": "MG ZS EV",
+    "KeySpecifications": {
+      "FuelType": "Electric",
+      "MaxPower": "173.83bhp",
+      "MaxTorque": "280nm",
+      "TransmissionType": "Automatic",
+      "BodyType": "SUV"
+    },
+    "KeyFeatures": {
+      "PowerSteering": "YES",
+      "PowerWindowsFront": "YES",
+      "AntLockBrakingSystem": "YES",
+      "AirConditioner": "YES",
+      "DriverAirbag": "YES",
+      "PassengerAirbag": "YES",
+      "AutomaticClimateControl": "YES"
+    },
+    "DimensionAndCapacity": {
+      "Length": "4323",
+      "Width": "1809",
+      "Height": "1649",
+      "WheelBase": "2581",
+      "SeatingCapacity": "5"
+    },
+    "imgsrc": "MG ZS EV.jpg",
+    "imagealt": "MG ZS EV"
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "name": "revolt rv400",
+    "KeyFeatures": {
+      "Odometer": "Digital",
+      "Regenerative breaking": "YES",
+      "Reversemode": "YES",
+      "MobileAppConnectivity": "YES",
+      "GPSAndNavigationYes": "YES"
+    },
+    "KeySpecifications": {
+      "RidingRange": "80-120 Km",
+      "TopSpeed": "85 Kmph",
+      "Batterychargingtime": "4.5Hrs",
+      },
+    "DimensionAndCapacity": {
+      "KerbWeight":"108 kg",
+      "OverallLength":"2156mm"
+      "OverallWidth:"813mm",
+      "WheelBase": "1350mm",
+      "SeatHeight":"770mm"
+    },
+    "exshowroomprice":"Rs.1,27,670"
+    "imgsrc": "Ola s1 pro.jpg",
+    "imagealt": "Ola s1 pro"
+  }
+]

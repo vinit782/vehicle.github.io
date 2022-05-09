@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Hyundai Kona Electric",
+    "KeySpecifications": {
+      "FuelType": "Electric",
+      "MaxPower": "134.10bhp",
+      "MaxTorque": "395Nm",
+      "TransmissionType": "Automatic",
+      "BodyType": "SUV"
+    },
+    "KeyFeatures": {
+      "PowerSteering": "YES",
+      "PowerWindowsFront": "YES",
+      "AntLockBrakingSystem": "YES",
+      "AirConditioner": "YES",
+      "DriverAirbag": "YES",
+      "PassengerAirbag": "YES",
+      "AutomaticClimateControl": "YES"
+    },
+    "DimensionAndCapacity": {
+      "Length": "4180",
+      "Width": "1800",
+      "Height": "1570",
+      "WheelBase": "2600",
+      "SeatingCapacity": "5"
+    },
+    "imgsrc": "Hyundai Kona Electric.jpg",
+    "imagealt": "Hyundai Kona Electric"
+  }
+]

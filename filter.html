@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>Vehicle Information</h2>
+<select name="types" id="types" onchange="hidetables()">
+  <option value="" selected="selected">Select Vehicle Type</option>
+  
+</select>
+<select name="cars" id="cars" onchange="myFunction()">
+  <option value="" selected="selected">Select Vehicle Type First</option>
+</select>
+<div id="4wheelerInfo" style="display:none">
+<h2>Key Specifications</h2>
+
+<table>
+  
+  <tr>
+    <td>FuelType</td>
+    <td id='FuelType4'></td>
+    
+  </tr>
+  <tr>
+    <td>MaxPower</td>
+    <td id='MaxPower4'></td>
+   
+  </tr>
+  <tr>
+    <td>MaxTorque</td>
+    <td id='MaxTorque4'></td>
+    
+  </tr>
+  <tr>
+    <td>TransmissionType</td>
+    <td id='TransmissionType4'></td>
+    
+  </tr>
+  <tr>
+    <td>BodyType</td>
+    <td id='BodyType4'></td>
+    
+  </tr>
+  
+</table>
+
+<h2>Key Features</h2>
+
+<table>
+  
+  <tr>
+    <td>Power Steering</td>
+    <td id='PowerSteering4'></td>
+    
+  </tr>
+  <tr>
+    <td>Power Windows Front</td>
+    <td id='PowerWindowsFront4'></td>
+   
+  </tr>
+  <tr>
+    <td>Anti Lock Braking System</td>
+    <td id='AntLockBrakingSystem4'></td>
+    
+  </tr>
+  <tr>
+    <td>Air Conditioner</td>
+    <td id='AirConditioner4'></td>
+    
+  </tr>
+  <tr>
+    <td>Driver Airbag </td>
+    <td id='DriverAirbag4'></td>
+    
+  </tr>
+  <tr>
+    <td>Passenger Airbag</td>
+    <td id='PassengerAirbag4'></td>
+    
+  </tr>
+  <tr>
+    <td>AutomaticClimateControl4</td>
+    <td id='AutomaticClimateControl4'></td>
+    
+  </tr>
+  
+  
+</table>
+<img id="myImg" width="300" style="padding: 5%"> </img>
+</div>
+
+<!-------------2 wheeler info ------------------------->
+<div id="2wheelerInfo" style="display:none">
+<h2>Key Specifications</h2>
+
+<table>
+  
+  <tr>
+    <td>Riding Range</td>
+    <td id='RidingRange2'></td>
+    
+  </tr>
+  <tr>
+    <td>Top Speed</td>
+    <td id='TopSpeed2'></td>
+   
+  </tr>
+  <tr>
+    <td>Battery charging time</td>
+    <td id='Batterychargingtime2'></td>
+    
+  </tr>
+  
+  
+</table>
+
+<h2>Key Features</h2>
+
+<table>
+  
+  <tr>
+    <td>Odometer</td>
+    <td id='Odometer2'></td>
+    
+  </tr>
+  <tr>
+    <td>Regenerative breaking</td>
+    <td id='Regenerativebreaking2'></td>
+   
+  </tr>
+  <tr>
+    <td>Reversemode</td>
+    <td id='Reversemode2'></td>
+    
+  </tr>
+  <tr>
+    <td>MobileApp Connectivity</td>
+    <td id='MobileAppConnectivity2'></td>
+    
+  </tr>
+  <tr>
+    <td>GPS And Navigation </td>
+    <td id='GPSAndNavigationYes2'></td>
+    
+  </tr>
+  
+  
+  
+</table>
+
+<h2>Dimension And Capacity</h2>
+
+<table>
+  
+  <tr>
+    <td>KerbWeight</td>
+    <td id='KerbWeight2'></td>
+    
+  </tr>
+  <tr>
+    <td>OverallLength</td>
+    <td id='OverallLength2'></td>
+   
+  </tr>
+  <tr>
+    <td>OverallWidth</td>
+    <td id='OverallWidth2'></td>
+    
+  </tr>
+  <tr>
+    <td>WheelBase</td>
+    <td id='WheelBase2'></td>
+    
+  </tr>
+  <tr>
+    <td>SeatHeight</td>
+    <td id='SeatHeight2'></td>
+    
+  </tr>
+  
+  
+  
+</table>
+<img id="myImg1" width="300" style="padding: 5%"> </img>
+</div>
+<script>
+var subjectObject = {
+  "4 wheeler": {
+     "TATA NEXON EV":[],
+	 "MG ZS EV":[],
+	 "Hyundai Kona Electric":[],
+	 "Mercedes-Benz EQC":[],
+      
+  },
+  "2 wheeler": {
+     "Ather 450x":[],
+	 "Bajaj chetak":[],
+	 "ola s1 pro":[],
+	 "Revolt rv 400":[],
+	 "Tvs iqube":[]
+   
+  }
+}
+window.onload = function() {
+  var subjectSel = document.getElementById("types");
+  var topicSel = document.getElementById("cars");
+  
+  for (var x in subjectObject) {
+    subjectSel.options[subjectSel.options.length] = new Option(x, x);
+  }
+  subjectSel.onchange = function() {
+    //empty Chapters- and Topics- dropdowns
+    topicSel.length = 1;
+    //display correct values
+    for (var y in subjectObject[this.value]) {
+      topicSel.options[topicSel.options.length] = new Option(y, y);
+    }
+  }
+  
+}
+</script>
+
+<script>
+function hidetables() {
+
+var vehicleType = document.getElementById('types').value;
+if(vehicleType == '2 wheeler'){
+	document.getElementById("4wheelerInfo").style = 'display:none';
+	document.getElementById("2wheelerInfo").style = 'display:block';
+}
+if(vehicleType == '4 wheeler'){
+	document.getElementById("2wheelerInfo").style = 'display:none';
+	document.getElementById("4wheelerInfo").style = 'display:block';
+}
+ 
+  
+  
+    
+}
+
+function myFunction() {
+var vehicleType = document.getElementById('types').value;
+if(vehicleType == '2 wheeler'){
+	hidetables();
+	get2wheelerinfo();
+}
+if(vehicleType == '4 wheeler'){
+	hidetables();
+	get4wheelerinfo();
+}
+ 
+  
+  
+    
+}
+
+/////******get 2 wheeler information************//////////
+function get2wheelerinfo() {
+var selectedVehicle = document.getElementById('cars').value;
+  var cars = [
+  {
+    "name": "Ather 450x",
+    "KeyFeatures": {
+      "Odometer": "Digital",
+      "Regenerativebreaking": "YES",
+      "Reversemode": "YES",
+      "MobileAppConnectivity": "YES",
+      "GPSAndNavigationYes": "YES"
+    },
+    "KeySpecifications": {
+      "RidingRange": "70 Km",
+      "TopSpeed": "80 Kmph",
+      "Batterychargingtime": "5.45Hrs",
+      },
+    "DimensionAndCapacity": {
+      "KerbWeight":"108 kg",
+      "OverallLength":"1,812mm",
+      "OverallWidth":"739mm",
+      "WheelBase": "1287mm",
+      "SeatHeight":"780mm"
+    },
+    "exshowroomprice":"Rs.1,08,670",
+    "imgsrc": "Ather 450x.jpg",
+    "imagealt": "Ather 450x"
+  },
+  {
+    "name": "Bajaj chetak",
+    "KeyFeatures": {
+      "Odometer": "Digital",
+      "Regenerativebreaking": "YES",
+      "Reversemode": "YES",
+      "MobileAppConnectivity": "YES",
+      "GPSAndNavigationYes": "YES"
+    },
+    "KeySpecifications": {
+      "RidingRange": "85-95 Km",
+      "TopSpeed": "70 Kmph",
+      "Batterychargingtime": "5Hrs",
+      },
+    "DimensionAndCapacity": {
+      "KerbWeight":"132 kg",
+      "OverallLength":"1,600mm",
+      "OverallWidth":"780mm",
+      "WheelBase": "1410mm",
+      "SeatHeight":"792mm"
+    },
+    "exshowroomprice":"Rs.1,42,670",
+    "imgsrc": "Bajaj chetak.jpg",
+    "imagealt": "Bajaj chetak"
+  },
+   {
+    "name": "ola s1 pro",
+    "KeyFeatures": {
+      "Odometer": "Digital",
+      "Regenerativebreaking": "YES",
+      "Reversemode": "YES",
+      "MobileAppConnectivity": "YES",
+      "GPSAndNavigationYes": "YES"
+    },
+    "KeySpecifications": {
+      "RidingRange": "135 Km",
+      "TopSpeed": "115 Kmph",
+      "Batterychargingtime": "6.30Hrs",
+      },
+    "DimensionAndCapacity": {
+      "KerbWeight":"125 kg",
+      "OverallLength":"1,859mm",
+      "OverallWidth":"712mm",
+      "WheelBase": "1359mm",
+      "SeatHeight":"792mm"
+    },
+    "exshowroomprice":"Rs.1,27,670",
+    "imgsrc": "ola s1 pro.jpg",
+    "imagealt": "ola s1 pro"
+  },
+  {
+    "name": "Revolt rv 400",
+    "KeyFeatures": {
+      "Odometer": "Digital",
+      "Regenerativebreaking": "YES",
+      "Reversemode": "YES",
+      "MobileAppConnectivity": "YES",
+      "GPSAndNavigationYes": "YES"
+    },
+    "KeySpecifications": {
+      "RidingRange": "80-120 Km",
+      "TopSpeed": "85 Kmph",
+      "Batterychargingtime": "4.5Hrs",
+      },
+    "DimensionAndCapacity": {
+      "KerbWeight":"108 kg",
+      "OverallLength":"2156mm",
+      "OverallWidth":"813mm",
+      "WheelBase": "1350mm",
+      "SeatHeight":"770mm"
+    },
+    "exshowroomprice":"Rs.1,27,670",
+    "imgsrc": "Revolt rv 400.jpg",
+    "imagealt": "Revolt rv 400"
+  },
+  {
+    "name": "Tvs iqube",
+    "KeyFeatures": {
+      "Odometer": "Digital",
+      "Regenerativebreaking": "YES",
+      "Reversemode": "YES",
+      "MobileAppConnectivity": "YES",
+      "GPSAndNavigationYes": "YES"
+    },
+    "KeySpecifications": {
+      "RidingRange": "75 Km",
+      "TopSpeed": "78 Kmph",
+      "Batterychargingtime": "5Hrs",
+      },
+    "DimensionAndCapacity": {
+      "KerbWeight":"118kg",
+      "OverallLength":"1,800mm",
+      "OverallWidth":"645mm",
+      "WheelBase": "1301mm",
+      "SeatHeight":"720mm"
+    },
+    "exshowroomprice":"Rs.87000",
+    "imgsrc": "Tvs iqube.jpg",
+    "imagealt": "Tvs iqube"
+  }
+  ];
+  
+  console.log(cars);
+  const result = cars.find(word => word.name == selectedVehicle);
+  document.getElementById("RidingRange2").innerHTML = result.KeySpecifications.RidingRange;
+  document.getElementById("TopSpeed2").innerHTML = result.KeySpecifications.TopSpeed;
+  document.getElementById("Batterychargingtime2").innerHTML = result.KeySpecifications.Batterychargingtime;
+  document.getElementById("Odometer2").innerHTML = result.KeyFeatures.Odometer;
+  document.getElementById("Regenerativebreaking2").innerHTML = result.KeyFeatures.Regenerativebreaking;
+  document.getElementById("Reversemode2").innerHTML = result.KeyFeatures.Reversemode;
+  document.getElementById("MobileAppConnectivity2").innerHTML = result.KeyFeatures.MobileAppConnectivity;
+  document.getElementById("GPSAndNavigationYes2").innerHTML = result.KeyFeatures.GPSAndNavigationYes;
+  document.getElementById("KerbWeight2").innerHTML = result.DimensionAndCapacity.KerbWeight;
+  document.getElementById("OverallLength2").innerHTML = result.DimensionAndCapacity.OverallLength;
+  document.getElementById("OverallWidth2").innerHTML = result.DimensionAndCapacity.OverallWidth;
+  document.getElementById("WheelBase2").innerHTML = result.DimensionAndCapacity.WheelBase;
+  document.getElementById("SeatHeight2").innerHTML = result.DimensionAndCapacity.SeatHeight;
+  document.getElementById("myImg1").src = result.imgsrc;
+  document.getElementById("myImg1").alt = result.imagealt;
+  console.log('after',result);
+}
+/////******get 4 wheeler information************//////////
+function get4wheelerinfo() {
+var a = document.getElementById('cars').value;
+  var cars = [
+  {
+    "name": "Hyundai Kona Electric",
+    "KeySpecifications": {
+      "FuelType": "Electric",
+      "MaxPower": "134.10bhp",
+      "MaxTorque": "395Nm",
+      "TransmissionType": "Automatic",
+      "BodyType": "SUV"
+    },
+    "KeyFeatures": {
+      "PowerSteering": "YES",
+      "PowerWindowsFront": "YES",
+      "AntLockBrakingSystem": "YES",
+      "AirConditioner": "YES",
+      "DriverAirbag": "YES",
+      "PassengerAirbag": "NO",
+      "AutomaticClimateControl": "NO"
+    },
+    "DimensionAndCapacity": {
+      "Length": "4180",
+      "Width": "1800",
+      "Height": "1570",
+      "WheelBase": "2600",
+      "SeatingCapacity": "5"
+    },
+    "imgsrc": "Hyundai Kona Electric.jpg",
+    "imagealt": "Hyundai Kona Electric"
+  },
+  {
+    "name": "Mercedes-Benz EQC",
+    "KeySpecifications": {
+      "FuelType": "Electric",
+      "MaxPower": "402.30Bhp",
+      "MaxTorque": "760Nm",
+      "TransmissionType": "Automatic",
+      "BodyType": "SUV"
+    },
+    "KeyFeatures": {
+      "PowerSteering": "YES",
+      "PowerWindowsFront": "NO",
+      "AntLockBrakingSystem": "NO",
+      "AirConditioner": "YES",
+      "DriverAirbag": "YES",
+      "PassengerAirbag": "YES",
+      "AutomaticClimateControl": "YES"
+    },
+    "DimensionAndCapacity": {
+      "Length": "4762",
+      "Width": "2096",
+      "Height": "1624",
+      "WheelBase": "2873",
+      "SeatingCapacity": "5"
+    },
+    "imgsrc": "Mercedes-Benz EQC.jpg",
+    "imagealt": "Mercedes-Benz EQC"
+  },
+  {
+    "name": "MG ZS EV",
+    "KeySpecifications": {
+      "FuelType": "Electric",
+      "MaxPower": "173.83bhp",
+      "MaxTorque": "280nm",
+      "TransmissionType": "Automatic",
+      "BodyType": "SUV"
+    },
+    "KeyFeatures": {
+      "PowerSteering": "YES",
+      "PowerWindowsFront": "NO",
+      "AntLockBrakingSystem": "YES",
+      "AirConditioner": "NO",
+      "DriverAirbag": "YES",
+      "PassengerAirbag": "YES",
+      "AutomaticClimateControl": "NO"
+    },
+    "DimensionAndCapacity": {
+      "Length": "4323",
+      "Width": "1809",
+      "Height": "1649",
+      "WheelBase": "2581",
+      "SeatingCapacity": "5"
+    },
+    "imgsrc": "MG ZS EV.jpg",
+    "imagealt": "MG ZS EV"
+  },
+  {
+    "name": "TATA NEXON EV",
+    "KeySpecifications": {
+      "FuelType": "Electric",
+      "MaxPower": "202.30Bhp",
+      "MaxTorque": "730Nm",
+      "TransmissionType": "Automatic",
+      "BodyType": "Compact SUV"
+    },
+    "KeyFeatures": {
+      "PowerSteering": "NO",
+      "PowerWindowsFront": "YES",
+      "AntLockBrakingSystem": "YES",
+      "AirConditioner": "YES",
+      "DriverAirbag": "YES",
+      "PassengerAirbag": "NO",
+      "AutomaticClimateControl": "YES"
+    },
+    "DimensionAndCapacity": {
+      "Length": "4762",
+      "Width": "2096",
+      "Height": "1624",
+      "WheelBase": "2873",
+      "SeatingCapacity": "5"
+    },
+    "imgsrc": "TATA NEXON EV.jpg",
+    "imagealt": "TATA NEXON EV"
+  }
+];  
+  
+  console.log(cars);
+  const result = cars.find(word => word.name == a);
+  document.getElementById("FuelType4").innerHTML = result.KeySpecifications.FuelType;
+  document.getElementById("MaxPower4").innerHTML = result.KeySpecifications.MaxPower;
+  document.getElementById("MaxTorque4").innerHTML = result.KeySpecifications.MaxTorque;
+  document.getElementById("TransmissionType4").innerHTML = result.KeySpecifications.TransmissionType;
+  document.getElementById("BodyType4").innerHTML = result.KeySpecifications.BodyType;
+  document.getElementById("PowerSteering4").innerHTML = result.KeyFeatures.PowerSteering;
+  document.getElementById("PowerWindowsFront4").innerHTML = result.KeyFeatures.PowerWindowsFront;
+  document.getElementById("AntLockBrakingSystem4").innerHTML = result.KeyFeatures.AntLockBrakingSystem;
+  document.getElementById("AirConditioner4").innerHTML = result.KeyFeatures.AirConditioner;
+  document.getElementById("DriverAirbag4").innerHTML = result.KeyFeatures.DriverAirbag;
+  document.getElementById("PassengerAirbag4").innerHTML = result.KeyFeatures.PassengerAirbag;
+  document.getElementById("AutomaticClimateControl4").innerHTML = result.KeyFeatures.AutomaticClimateControl;
+  document.getElementById("myImg").src = result.imgsrc;
+  document.getElementById("myImg").alt = result.imagealt;
+  console.log('after',result);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Mercedes-Benz EQC",
+    "KeySpecifications": {
+      "FuelType": "Electric",
+      "MaxPower": "402.30Bhp",
+      "MaxTorque": "760Nm",
+      "TransmissionType": "Automatic",
+      "BodyType": "SUV"
+    },
+    "KeyFeatures": {
+      "PowerSteering": "YES",
+      "PowerWindowsFront": "YES",
+      "AntLockBrakingSystem": "YES",
+      "AirConditioner": "YES",
+      "DriverAirbag": "YES",
+      "PassengerAirbag": "YES",
+      "AutomaticClimateControl": "YES"
+    },
+    "DimensionAndCapacity": {
+      "Length": "4762",
+      "Width": "2096",
+      "Height": "1624",
+      "WheelBase": "2873",
+      "SeatingCapacity": "5"
+    },
+    "imgsrc": "Mercedes-Benz EQC.jpg",
+    "imagealt": "Mercedes-Benz EQC"
+  }
+]

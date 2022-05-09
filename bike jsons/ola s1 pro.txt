@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Ola s1 pro",
+    "KeyFeatures": {
+      "Odometer": "Digital",
+      "Regenerative breaking": "YES",
+      "Reversemode": "YES",
+      "MobileAppConnectivity": "YES",
+      "GPSAndNavigationYes": "YES"
+    },
+    "KeySpecifications": {
+      "RidingRange": "135 Km",
+      "TopSpeed": "115 Kmph",
+      "Batterychargingtime": "6.30Hrs",
+      },
+    "DimensionAndCapacity": {
+      "KerbWeight":"125 kg",
+      "OverallLength":"1,859mm",
+      "OverallWidth":"712mm",
+      "WheelBase": "1359mm",
+      "SeatHeight":"792mm"
+    },
+    "exshowroomprice":"Rs.1,27,670",
+    "imgsrc": "Ola s1 pro.jpg",
+    "imagealt": "Ola s1 pro"
+  }
+]
